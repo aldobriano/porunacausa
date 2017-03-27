@@ -35,7 +35,7 @@ p {
   }
 }
 a {
-  color: #42DCA3;
+  color: #51aedc;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -43,7 +43,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #217aa6;
 }
 .light {
   font-weight: 400;
@@ -233,7 +233,7 @@ a:focus {
 }
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 250px;
+    padding-top: 100px;
   }
   .download-section {
     padding: 100px 0;
@@ -253,16 +253,16 @@ a:focus {
   border-radius: 0;
 }
 .btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
+  border: 1px solid #51aedc;
+  color: #51aedc;
   background-color: transparent;
 }
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #42DCA3;
+  border: 1px solid #51aedc;
   outline: none;
   color: black;
-  background-color: #42DCA3;
+  background-color: #51aedc;
 }
 ul.banner-social-buttons {
   margin-top: 0;

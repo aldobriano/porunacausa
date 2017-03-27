@@ -1,4 +1,19 @@
 .main-logo {
-	max-width:75%;
+	max-width:70%;
 	padding-top:5%;
+}
+
+.form-border {
+  border: 1px solid #ccc; /* THIS */
+  border-radius: 4px; /* THIS */
+}
+
+.small-margin{
+  margin:10px;
+}
+.mc-field-group{
+  text-align:left;
+}
+.mc-field-group label{
+  font-weight:100;
 }
