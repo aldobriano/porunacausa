@@ -9,11 +9,11 @@ var pkg = require('./package.json');
 
 // Set the banner content
 var banner = ['/*!\n',
-    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
-    ' */\n',
-    ''
+  ' ** <%= pkg.name %> - <%= pkg.description %>',
+  ' ** @author <%= pkg.author %>',
+  ' ** @version v<%= pkg.version %>',
+  ' **/',
+  ''
 ].join('');
 
 // Compile LESS files from /less into /css
@@ -30,6 +30,16 @@ gulp.task('less', function() {
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/grayscale.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+gulp.task('minify-css', ['less'], function() {
+    return gulp.src('css/porunacausa.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
